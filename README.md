@@ -1,6 +1,6 @@
 # Robux Convertor
 
-Minimal static Robux to USD/EUR converter for GitHub Pages.
+Minimal static Robux to USD/EUR converter.
 
 ## Rates
 
