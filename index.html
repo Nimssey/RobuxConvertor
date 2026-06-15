@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Minimal Robux to USD and EUR converter with selectable creator payout rates.">
+	<title>Robux Convertor</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main class="page">
+		<section class="converter" aria-labelledby="title">
+			<header class="header">
+				<h1 id="title">Convert Robux to Money</h1>
+			</header>
+
+			<form class="panel" id="converterForm">
+				<label class="field">
+					<span class="label">Robux</span>
+					<span class="inputGroup">
+						<input id="robuxInput" type="text" inputmode="decimal" autocomplete="off" placeholder="0">
+						<span class="unit">Robux</span>
+					</span>
+				</label>
+
+				<label class="field">
+					<span class="label">Value</span>
+					<span class="inputGroup">
+						<input id="valueOutput" type="text" readonly value="$0.00">
+						<span class="unit" id="currencyUnit">USD</span>
+					</span>
+				</label>
+
+				<div class="controls" aria-label="Conversion settings">
+					<label class="control">
+						<span class="label">Currency</span>
+						<select id="currencySelect">
+							<option value="USD">USD</option>
+							<option value="EUR">EUR</option>
+						</select>
+					</label>
+
+					<label class="control">
+						<span class="label">Rate</span>
+						<select id="rateSelect">
+							<option value="0.0038">Standard rate - $0.0038 / Robux</option>
+							<option value="0.0054">18+ US Player rate - $0.0054 / Robux</option>
+							<option value="0.0035">Legacy/manual rate - $0.0035 / Robux</option>
+						</select>
+					</label>
+
+					<div class="control hidden" id="eurRateControl">
+						<span class="label">USD to EUR</span>
+						<span class="rateStatus" id="eurRateStatus">Syncing live rate...</span>
+					</div>
+				</div>
+			</form>
+
+			<p class="description" id="rateDescription">
+				Standard Rate: $0.0038 per Robux, equal to $38 per 10,000 Robux.
+			</p>
+
+			<footer class="footer">
+				<span>Nimssey's Convertor</span>
+			</footer>
+		</section>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
